@@ -1,0 +1,131 @@
+<h3>Questionnaire</h3><br>
+<div class="progress">
+  <div id="theprogressbar" class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+<div id="question_1" class="question">
+	Question #1 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_2" class="question">
+	Question #2 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_3" class="question">
+	Question #3 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_4" class="question">
+	Question #4 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_5" class="question">
+	Question #5 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_6" class="question">
+	Question #6 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_7" class="question">
+	Question #7 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_8" class="question">
+	Question #8 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_9" class="question">
+	Question #9 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_10" class="question">
+	Question #10 <br>
+	<input type="checkbox" name="vehicle" value="Bike" checked> Option 1
+  	<input type="checkbox" name="vehicle" value="Car"> Option 2
+  	<input type="checkbox" name="vehicle" value="Car"> Option 3
+  	<input type="checkbox" name="vehicle" value="Car"> Option 4
+</div>
+
+<div id="question_11" class="question">
+	FINISH
+</div>
+
+<a onclick="left_function()" class="btn btn-default">Previous</a>
+<a onclick="right_function()" class="btn btn-success">Next</a>
+
+<script type="text/javascript">
+	var aria = 0;
+	var question;
+	$("#question_2").hide();
+	$("#question_3").hide();
+	$("#question_4").hide();
+	$("#question_5").hide();
+	$("#question_6").hide();
+	$("#question_7").hide();
+	$("#question_8").hide();
+	$("#question_9").hide();
+	$("#question_10").hide();
+	$("#question_11").hide();
+
+	function left_function()
+	{
+		if (aria >= 10 && aria <= 100)
+		{
+			aria = aria - 10;
+			$('#theprogressbar').attr('aria-valuenow', aria).css('width',aria+"%");
+		}	
+		question = aria/10+1;
+		$("#question_"+(question+1)).hide();
+		$("#question_"+question).show();
+	}
+
+	function right_function()
+	{
+		if (aria >= 0 && aria <= 90)
+		{
+			aria = aria + 10;
+			$('#theprogressbar').attr('aria-valuenow', aria).css('width',aria+"%");
+		}	
+
+		question = aria/10+1;
+		$("#question_"+question).show();
+		$("#question_"+(question-1)).hide();
+	}	
+</script>

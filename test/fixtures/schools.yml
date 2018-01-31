@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  program_name: MyString
+  degree_awarded: MyString
+  institution_name: MyString
+  institution_type: MyString
+  duration: MyString
+  inscription_cost: MyString
+  monthly_cost: MyString
+  location: MyString
+  required_degrees: MyString
+  requirements: MyText
+  vacants: MyString
+  weekly_duration: MyString
+  day_duration: MyString
+  schedule: MyString
+
+two:
+  program_name: MyString
+  degree_awarded: MyString
+  institution_name: MyString
+  institution_type: MyString
+  duration: MyString
+  inscription_cost: MyString
+  monthly_cost: MyString
+  location: MyString
+  required_degrees: MyString
+  requirements: MyText
+  vacants: MyString
+  weekly_duration: MyString
+  day_duration: MyString
+  schedule: MyString
