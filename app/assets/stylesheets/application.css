@@ -86,6 +86,7 @@
 	background-color: #37a52b !important;
 }
 
+
 .dropdown-menu > li > a:hover {
     background-color: #37a52b !important;
     background-image: none !important;
@@ -106,3 +107,7 @@
 	background-color: orange !important;
 }
 
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #37a52b !important;
+    border-color: none !important;
+}

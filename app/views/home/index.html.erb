@@ -7,27 +7,87 @@
 
 
 <h2>Job offers</h2>
-<h3>Short term</h3>
+<h3 class="text-left">Short term</h3>
 
-<% @jobs_short.each do |job| %>
-	<%= job.name.humanize %> <br>
-<% end %>
+<table class="table text-left">
+  <thead>
+    <tr>
+      <td scope="col"><strong>Name</strong></td>
+      <td scope="col"><strong>Monthly_salary</strong></td>
+      <td scope="col"><strong>Bussiness</strong></td>
+      <td scope="col"><strong>Location</strong></td>
+      <td scope="col"><strong>Career</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @jobs_short.each do |job| %>
+  		<tr>
+	      <td> <a href="/jobs/<%= job.id %>"> <%= job.name.humanize %> </a> </td>
+	      <td> <%= job.monthly_salary.humanize %></td>
+	      <td>  <%= job.empresa.humanize %></td>
+	      <td> <%= job.location.humanize %></td>
+	      <td> Not needed</td>
+	    </tr>
+	<% end %>
+  </tbody>
+</table>
 
-<h3>Medium term</h3>
+<h3 class="text-left">Medium term</h3>
 
-<% @jobs_medium.each do |job| %>
-	<%= job.name.humanize %> <br>
-	<%School.all.shuffle[0..rand(0..1)].each do |school| %>
-		-> <%= school.program_name.humanize %> <br>
-	<%end%>
-<% end %>
+<table class="table text-left">
+  <thead>
+    <tr>
+      <td scope="col"><strong>Name</strong></td>
+      <td scope="col"><strong>Monthly_salary</strong></td>
+      <td scope="col"><strong>Bussiness</strong></td>
+      <td scope="col"><strong>Location</strong></td>
+      <td scope="col"><strong>Career</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @jobs_medium.each do |job| %>
+  		<tr>
+	      <td> <a href="/jobs/<%= job.id %>"> <%= job.name.humanize %> </a> </td>
+	      <td> <%= job.monthly_salary.humanize %></td>
+	      <td>  <%= job.empresa.humanize %></td>
+	      <td> <%= job.location.humanize %></td>
+	      <td>       		
+				<%School.all.shuffle[0..rand(0..1)].each do |school| %>
+					<a href="/education/<%= school.id %>"> <%= school.program_name.humanize %> </a> <br>
+				<%end%>
+	      </td>
+	    </tr>
+	<% end %>
+  </tbody>
+</table>
 
 
-<h3>Long term</h3>
+<h3 class="text-left">Long term</h3>
 
-<% @jobs_long.each do |job| %>
-	<%= job.name.humanize %> <br>
-	<%School.all.shuffle[0..rand(1..2)].each do |school| %>
-		-> <%= school.program_name.humanize %> <br>
-	<%end%>
-<% end %>
+
+<table class="table text-left">
+  <thead>
+    <tr>
+      <td scope="col"><strong>Name</strong></td>
+      <td scope="col"><strong>Monthly_salary</strong></td>
+      <td scope="col"><strong>Bussiness</strong></td>
+      <td scope="col"><strong>Location</strong></td>
+      <td scope="col"><strong>Career</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+  	<%  @jobs_long.each do |job| %>
+  		<tr>
+	      <td> <a href="/jobs/<%= job.id %>"> <%= job.name.humanize %> </a> </td>
+	      <td> <%= job.monthly_salary.humanize %></td>
+	      <td>  <%= job.empresa.humanize %></td>
+	      <td> <%= job.location.humanize %></td>
+	      <td>       		
+				<%School.all.shuffle[0..rand(0..1)].each do |school| %>
+					 <a href="/education/<%= school.id %>"> <%= school.program_name.humanize %> </a> <br>
+				<%end%>
+	      </td>
+	    </tr>
+	<% end %>
+  </tbody>
+</table>
