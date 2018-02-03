@@ -21,6 +21,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
+      #For interface
+      t.boolean :test_taken
+      t.datetime :last_test_taken
+
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at

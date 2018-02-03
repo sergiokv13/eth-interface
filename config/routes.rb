@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 	authenticated :user do
 	  root to: 'home#index', as: :authenticated_root
 	  get '/questionnaire' => 'questionnaire#index'
+	  get '/finish' => 'questionnaire#finish'
 	end
 	root to: redirect('/users/sign_in')
 

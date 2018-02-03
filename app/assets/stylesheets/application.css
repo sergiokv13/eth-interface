@@ -17,3 +17,92 @@
 .question{
 	height: 15em;
 }
+
+.bg-img{
+
+	background: url("/assets/bg.jpg") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	
+	/* The image used */
+    background-image: url("/assets/bg.jpg");
+
+}
+
+.bgq-img{
+
+	background: url("/assets/bgq.jpg") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	
+	/* The image used */
+    background-image: url("/assets/bgq.jpg");
+
+}
+
+.bg3-img{
+
+	background: url("/assets/bg3.jpg") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	
+	/* The image used */
+    background-image: url("/assets/bg3.jpg");
+
+}
+
+
+.jumbotron{
+	border-radius: 10px;
+	background-color: white !important;
+	padding-left: 5em !important;
+	padding-right: 5em !important;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+
+.navbar{
+	background-color: #3db50e !important;
+	border-radius: 0px !important;
+}
+
+/* Title */
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar a{
+	color: white !important;
+}
+
+.navbar a:hover{
+	background-color: #37a52b !important;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #37a52b !important;
+    background-image: none !important;
+}
+
+
+
+.dropdown-menu {
+	background-color: #3db50e !important;
+}
+
+.dropdown-menu ul:hover{
+	background-color: #3db50e !important;
+}
+
+.progress-bar
+{
+	background-color: orange !important;
+}
+

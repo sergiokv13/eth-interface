@@ -1,19 +1,33 @@
+
+
+<div class="alert alert-info">
+  Last time the test was taken: <%=current_user.last_test_taken%><br>
+<a href="/questionnaire" style="text-decoration: underline;">Retake the quest</a>
+</div>
+
+
 <h2>Job offers</h2>
 <h3>Short term</h3>
 
 <% @jobs_short.each do |job| %>
-	<%= job.name %> <br>
+	<%= job.name.humanize %> <br>
 <% end %>
 
 <h3>Medium term</h3>
 
 <% @jobs_medium.each do |job| %>
-	<%= job.name %> <br>
+	<%= job.name.humanize %> <br>
+	<%School.all.shuffle[0..rand(0..1)].each do |school| %>
+		-> <%= school.program_name.humanize %> <br>
+	<%end%>
 <% end %>
 
 
 <h3>Long term</h3>
 
 <% @jobs_long.each do |job| %>
-	<%= job.name %> <br>
+	<%= job.name.humanize %> <br>
+	<%School.all.shuffle[0..rand(1..2)].each do |school| %>
+		-> <%= school.program_name.humanize %> <br>
+	<%end%>
 <% end %>

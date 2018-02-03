@@ -20,10 +20,21 @@
 
   </head>
 
-  <body>
+<% if !current_user %>
+  <body class="bg-img" %>
+<% else %>
+  <% if request.original_url.include? "/questionnaire"  %>
+    <body class="bgq-img" %>
+  <% else %>
+     <body class="bg3-img">
+  <% end %>
+<% end %>
+
+
+
 
   <% if current_user%>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-custom">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -33,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Interface</a>
+          <a class="navbar-brand" href="/">Interface</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,11 +64,18 @@
     <div style="height: 3em;"></div>
   <%end%>
   
-    <div class="col-lg-2"></div>
+  <% if !current_user %>
+     <div class="col-lg-4"></div>
+    <div class="col-lg-4 jumbotron text-center">
+      <%= yield %>
+    </div>
+    <div class="col-lg-4"></div>
+  <% else %>
+     <div class="col-lg-2"></div>
     <div class="col-lg-8 jumbotron text-center">
       <%= yield %>
     </div>
     <div class="col-lg-2"></div>
-
+  <% end %>
   </body>
 </html>
